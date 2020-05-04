@@ -8,7 +8,7 @@ variable "managed_disk_names" {
   description = "Names of the disks to snapshot provided in list format"
 }
 
-variable "version" {
+variable "ver" {
   type        = "string"
   default     = "1"
   description = "Snapshot version"
