@@ -10,7 +10,7 @@ data "azurerm_managed_disk" "disks" {
 
 resource "azurerm_snapshot" "snapshots" {
   count               = "${length(var.managed_disk_names)}"
-  name                = "${var.managed_disk_names[count.index]}-snapshot-${replace(var.version, ".", "-")}"
+  name                = "${var.managed_disk_names[count.index]}-snapshot-${replace(var.ver, ".", "-")}"
   location            = "${data.azurerm_resource_group.rg.location}"
   resource_group_name = "${var.resource_group_name}"
   create_option       = "Copy"
